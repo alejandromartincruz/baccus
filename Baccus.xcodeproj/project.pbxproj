@@ -16,6 +16,8 @@
 		FAF85F331C8B0FA200402FAD /* WineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF85F311C8B0FA200402FAD /* WineViewController.xib */; };
 		FAF85F361C8B536200402FAD /* splitView_score_glass@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF85F351C8B536200402FAD /* splitView_score_glass@2x.png */; };
 		FAF85F391C8B546E00402FAD /* bembibre.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FAF85F381C8B546E00402FAD /* bembibre.jpg */; };
+		FAF85F3D1C8B7E5400402FAD /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF85F3B1C8B7E5400402FAD /* WebViewController.m */; };
+		FAF85F3E1C8B7E5400402FAD /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF85F3C1C8B7E5400402FAD /* WebViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,9 @@
 		FAF85F311C8B0FA200402FAD /* WineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WineViewController.xib; sourceTree = "<group>"; };
 		FAF85F351C8B536200402FAD /* splitView_score_glass@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splitView_score_glass@2x.png"; sourceTree = "<group>"; };
 		FAF85F381C8B546E00402FAD /* bembibre.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bembibre.jpg; sourceTree = "<group>"; };
+		FAF85F3A1C8B7E5400402FAD /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		FAF85F3B1C8B7E5400402FAD /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		FAF85F3C1C8B7E5400402FAD /* WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +106,9 @@
 				FAF85F2F1C8B0FA200402FAD /* WineViewController.h */,
 				FAF85F301C8B0FA200402FAD /* WineViewController.m */,
 				FAF85F311C8B0FA200402FAD /* WineViewController.xib */,
+				FAF85F3A1C8B7E5400402FAD /* WebViewController.h */,
+				FAF85F3B1C8B7E5400402FAD /* WebViewController.m */,
+				FAF85F3C1C8B7E5400402FAD /* WebViewController.xib */,
 			);
 			name = Controllers;
 			path = ..;
@@ -175,6 +183,7 @@
 				FAF85F361C8B536200402FAD /* splitView_score_glass@2x.png in Resources */,
 				FAD68A3A1C8361DE002B1F83 /* Assets.xcassets in Resources */,
 				FAF85F331C8B0FA200402FAD /* WineViewController.xib in Resources */,
+				FAF85F3E1C8B7E5400402FAD /* WebViewController.xib in Resources */,
 				FAF85F391C8B546E00402FAD /* bembibre.jpg in Resources */,
 				FAD68A3D1C8361DE002B1F83 /* LaunchScreen.storyboard in Resources */,
 			);
@@ -188,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAD68A461C837270002B1F83 /* WineModel.m in Sources */,
+				FAF85F3D1C8B7E5400402FAD /* WebViewController.m in Sources */,
 				FAF85F321C8B0FA200402FAD /* WineViewController.m in Sources */,
 				FAD68A381C8361DE002B1F83 /* AppDelegate.m in Sources */,
 				FAD68A351C8361DE002B1F83 /* main.m in Sources */,

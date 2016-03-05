@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "WineModel.h"
 #import "WineViewController.h"
+#import "WebViewController.h"
 
 @interface AppDelegate ()
 
@@ -35,10 +36,13 @@
     
     // crear controlador
     
-    WineViewController *wineVC = [[WineViewController alloc] initWithModel:tintorro];
+    //WineViewController *wineVC = [[WineViewController alloc] initWithModel:tintorro];
+    WebViewController *webVC = [[WebViewController alloc] initWithModel:tintorro];
     
     // asignar controlador raiz
-    self.window.rootViewController = wineVC;
+    
+    self.window.rootViewController = webVC;
+    
     
     self.window.backgroundColor = [UIColor orangeColor];
     [self.window makeKeyAndVisible];
