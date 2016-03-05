@@ -11,6 +11,11 @@
 		FAD68A381C8361DE002B1F83 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD68A371C8361DE002B1F83 /* AppDelegate.m */; };
 		FAD68A3A1C8361DE002B1F83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAD68A391C8361DE002B1F83 /* Assets.xcassets */; };
 		FAD68A3D1C8361DE002B1F83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAD68A3B1C8361DE002B1F83 /* LaunchScreen.storyboard */; };
+		FAD68A461C837270002B1F83 /* WineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD68A451C837270002B1F83 /* WineModel.m */; };
+		FAF85F321C8B0FA200402FAD /* WineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF85F301C8B0FA200402FAD /* WineViewController.m */; };
+		FAF85F331C8B0FA200402FAD /* WineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF85F311C8B0FA200402FAD /* WineViewController.xib */; };
+		FAF85F361C8B536200402FAD /* splitView_score_glass@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF85F351C8B536200402FAD /* splitView_score_glass@2x.png */; };
+		FAF85F391C8B546E00402FAD /* bembibre.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FAF85F381C8B546E00402FAD /* bembibre.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +26,13 @@
 		FAD68A391C8361DE002B1F83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAD68A3C1C8361DE002B1F83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAD68A3E1C8361DE002B1F83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAD68A441C837270002B1F83 /* WineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WineModel.h; sourceTree = "<group>"; };
+		FAD68A451C837270002B1F83 /* WineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WineModel.m; sourceTree = "<group>"; };
+		FAF85F2F1C8B0FA200402FAD /* WineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WineViewController.h; sourceTree = "<group>"; };
+		FAF85F301C8B0FA200402FAD /* WineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WineViewController.m; sourceTree = "<group>"; };
+		FAF85F311C8B0FA200402FAD /* WineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WineViewController.xib; sourceTree = "<group>"; };
+		FAF85F351C8B536200402FAD /* splitView_score_glass@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splitView_score_glass@2x.png"; sourceTree = "<group>"; };
+		FAF85F381C8B546E00402FAD /* bembibre.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bembibre.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +65,11 @@
 		FAD68A321C8361DE002B1F83 /* Baccus */ = {
 			isa = PBXGroup;
 			children = (
+				FAF85F371C8B536C00402FAD /* Resources */,
 				FAD68A361C8361DE002B1F83 /* AppDelegate.h */,
 				FAD68A371C8361DE002B1F83 /* AppDelegate.m */,
+				FAD68A471C837294002B1F83 /* Models */,
+				FAF85F341C8B0FC000402FAD /* Controllers */,
 				FAD68A391C8361DE002B1F83 /* Assets.xcassets */,
 				FAD68A3B1C8361DE002B1F83 /* LaunchScreen.storyboard */,
 				FAD68A3E1C8361DE002B1F83 /* Info.plist */,
@@ -69,6 +84,35 @@
 				FAD68A341C8361DE002B1F83 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FAD68A471C837294002B1F83 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FAD68A441C837270002B1F83 /* WineModel.h */,
+				FAD68A451C837270002B1F83 /* WineModel.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		FAF85F341C8B0FC000402FAD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FAF85F2F1C8B0FA200402FAD /* WineViewController.h */,
+				FAF85F301C8B0FA200402FAD /* WineViewController.m */,
+				FAF85F311C8B0FA200402FAD /* WineViewController.xib */,
+			);
+			name = Controllers;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		FAF85F371C8B536C00402FAD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FAF85F381C8B546E00402FAD /* bembibre.jpg */,
+				FAF85F351C8B536200402FAD /* splitView_score_glass@2x.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,7 +172,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAF85F361C8B536200402FAD /* splitView_score_glass@2x.png in Resources */,
 				FAD68A3A1C8361DE002B1F83 /* Assets.xcassets in Resources */,
+				FAF85F331C8B0FA200402FAD /* WineViewController.xib in Resources */,
+				FAF85F391C8B546E00402FAD /* bembibre.jpg in Resources */,
 				FAD68A3D1C8361DE002B1F83 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,6 +187,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAD68A461C837270002B1F83 /* WineModel.m in Sources */,
+				FAF85F321C8B0FA200402FAD /* WineViewController.m in Sources */,
 				FAD68A381C8361DE002B1F83 /* AppDelegate.m in Sources */,
 				FAD68A351C8361DE002B1F83 /* main.m in Sources */,
 			);
@@ -282,6 +331,7 @@
 				FAD68A431C8361DE002B1F83 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
