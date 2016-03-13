@@ -34,14 +34,22 @@
                                                  rating:5
                                                   photo:[UIImage imageNamed:@"bembibre.jpg"]];
     
-    // crear controlador
+    // crear controladores
     
-    //WineViewController *wineVC = [[WineViewController alloc] initWithModel:tintorro];
-    WebViewController *webVC = [[WebViewController alloc] initWithModel:tintorro];
+    WineViewController *wineVC = [[WineViewController alloc] initWithModel:tintorro];
+    //WebViewController *webVC = [[WebViewController alloc] initWithModel:tintorro];
+    
+    
+    // crear combinador
+    
+    //UITabBarController *tabVC = [[UITabBarController alloc] init];
+    //tabVC.viewControllers = @[wineVC, webVC];
+    
+    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:wineVC];
     
     // asignar controlador raiz
     
-    self.window.rootViewController = webVC;
+    self.window.rootViewController = navVC;
     
     
     self.window.backgroundColor = [UIColor orangeColor];

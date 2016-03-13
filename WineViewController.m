@@ -7,6 +7,7 @@
 //
 
 #import "WineViewController.h"
+#import "WebViewController.h"
 
 @interface WineViewController ()
 
@@ -18,6 +19,8 @@
     if (self = [super initWithNibName:nil
                                bundle:nil]) {
         _model = aModel;
+        
+        self.title = aModel.name;
     }
     
     return self;
@@ -31,9 +34,17 @@
 
 // sincroniza modelo y vista
 - (void) viewWillAppear:(BOOL)animated {
+    self.edgesForExtendedLayout =UIRectEdgeNone;
     [super viewWillAppear:animated];
     
     [self syncModelWithView];
+    
+    
+    
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0.5
+                                                                        green:0
+                                                                         blue:0.13
+                                                                        alpha:1];
     
 }
 
@@ -45,7 +56,14 @@
 #pragma mark - Actions
 
 -(IBAction)displayWeb:(id)sender {
-    NSLog(@"Go to %@", self.model.wineCompanyWeb);
+    //NSLog(@"Go to %@", self.model.wineCompanyWeb);
+    
+    //Crear webVC
+    WebViewController *webVC = [[WebViewController alloc] initWithModel:self.model];
+    
+    // push al combinador
+    [self.navigationController pushViewController:webVC
+                                         animated:YES];
 }
 
 #pragma mark - Utils
