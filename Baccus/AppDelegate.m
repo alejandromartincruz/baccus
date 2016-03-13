@@ -34,22 +34,51 @@
                                                  rating:5
                                                   photo:[UIImage imageNamed:@"bembibre.jpg"]];
     
+    WineModel *albarinno = [WineModel wineWithName:@"Zárate"
+                                         wineCompanyName:@"Zárate"
+                                                    type:@"white"
+                                                  origin:@"Rias Bajas"
+                                                  grapes:@[@"Albariño"]
+                                          wineCompanyWeb:[NSURL URLWithString:@"http://www.albarino-zarate.com"]
+                                                   notes:@"El albariño Zarate es un vino blanco monovarietal que pertenece a la Denominación de Origen Rías Baixas. Considerado por la crítica especializada como uno de los grandes vinos blancos del mundo, el albariño ya es todo un mito."
+                                                  rating:4
+                                                   photo:[UIImage imageNamed:@"zarate.gif"]];
+    
+    WineModel *champagne = [WineModel wineWithName:@"Comtes de Champagne"
+                                         wineCompanyName:@"Champagne Taittinger"
+                                                    type:@"other"
+                                                  origin:@"Champagne"
+                                                  grapes:@[@"Chardonnay"]
+                                          wineCompanyWeb:[NSURL URLWithString:@"http://www.taittinger.fr"]
+                                                   notes:@"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nunc purus. Curabitur eu velit mauris. Curabitur magna nisi, ullamcorper ac bibendum ac, laoreet et justo. Praesent vitae tortor quis diam luctus condimentum. Suspendisse potenti. In magna elit, interdum sit amet facilisis dictum, bibendum nec libero. Maecenas pellentesque posuere vehicula. Vivamus eget nisl urna, quis egestas sem. Vivamus at venenatis quam. Sed eu nulla a orci fringilla pulvinar ut eu diam. Morbi nibh nibh, bibendum at laoreet egestas, scelerisque et nisi. Donec ligula quam, semper nec bibendum in, semper eget dolor. In hac habitasse platea dictumst. Maecenas adipiscing semper rutrum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;"
+                                                  rating:5
+                                                   photo:[UIImage imageNamed:@"comtesDeChampagne.jpg"]];
+    
     // crear controladores
     
-    WineViewController *wineVC = [[WineViewController alloc] initWithModel:tintorro];
+    WineViewController *tintoVC = [[WineViewController alloc] initWithModel:tintorro];
+    WineViewController *blancoVC = [[WineViewController alloc] initWithModel:albarinno];
+    WineViewController *otroVC = [[WineViewController alloc] initWithModel:champagne];
     //WebViewController *webVC = [[WebViewController alloc] initWithModel:tintorro];
     
     
-    // crear combinador
+    // crear navigation
     
     //UITabBarController *tabVC = [[UITabBarController alloc] init];
     //tabVC.viewControllers = @[wineVC, webVC];
     
-    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:wineVC];
+    UINavigationController *tintoNav = [[UINavigationController alloc] initWithRootViewController:tintoVC];
+    UINavigationController *blancoNav = [[UINavigationController alloc] initWithRootViewController:blancoVC];
+    UINavigationController *otroNav = [[UINavigationController alloc] initWithRootViewController:otroVC];
+    
+    // crear combinador
+    
+    UITabBarController *tabVC = [[UITabBarController alloc] init];
+    tabVC.viewControllers = @[tintoNav, blancoNav, otroNav];
     
     // asignar controlador raiz
     
-    self.window.rootViewController = navVC;
+    self.window.rootViewController = tabVC;
     
     
     self.window.backgroundColor = [UIColor orangeColor];

@@ -12,6 +12,8 @@
 		FAD68A3A1C8361DE002B1F83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAD68A391C8361DE002B1F83 /* Assets.xcassets */; };
 		FAD68A3D1C8361DE002B1F83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAD68A3B1C8361DE002B1F83 /* LaunchScreen.storyboard */; };
 		FAD68A461C837270002B1F83 /* WineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD68A451C837270002B1F83 /* WineModel.m */; };
+		FAE19DB71C95E7D40063B448 /* comtesDeChampagne.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FAE19DB51C95E7D40063B448 /* comtesDeChampagne.jpg */; };
+		FAE19DB81C95E7D40063B448 /* zarate.gif in Resources */ = {isa = PBXBuildFile; fileRef = FAE19DB61C95E7D40063B448 /* zarate.gif */; };
 		FAF85F321C8B0FA200402FAD /* WineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF85F301C8B0FA200402FAD /* WineViewController.m */; };
 		FAF85F331C8B0FA200402FAD /* WineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF85F311C8B0FA200402FAD /* WineViewController.xib */; };
 		FAF85F361C8B536200402FAD /* splitView_score_glass@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF85F351C8B536200402FAD /* splitView_score_glass@2x.png */; };
@@ -30,6 +32,8 @@
 		FAD68A3E1C8361DE002B1F83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAD68A441C837270002B1F83 /* WineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WineModel.h; sourceTree = "<group>"; };
 		FAD68A451C837270002B1F83 /* WineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WineModel.m; sourceTree = "<group>"; };
+		FAE19DB51C95E7D40063B448 /* comtesDeChampagne.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = comtesDeChampagne.jpg; sourceTree = "<group>"; };
+		FAE19DB61C95E7D40063B448 /* zarate.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = zarate.gif; sourceTree = "<group>"; };
 		FAF85F2F1C8B0FA200402FAD /* WineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WineViewController.h; sourceTree = "<group>"; };
 		FAF85F301C8B0FA200402FAD /* WineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WineViewController.m; sourceTree = "<group>"; };
 		FAF85F311C8B0FA200402FAD /* WineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WineViewController.xib; sourceTree = "<group>"; };
@@ -118,6 +122,8 @@
 			isa = PBXGroup;
 			children = (
 				FAF85F381C8B546E00402FAD /* bembibre.jpg */,
+				FAE19DB51C95E7D40063B448 /* comtesDeChampagne.jpg */,
+				FAE19DB61C95E7D40063B448 /* zarate.gif */,
 				FAF85F351C8B536200402FAD /* splitView_score_glass@2x.png */,
 			);
 			name = Resources;
@@ -181,9 +187,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAF85F361C8B536200402FAD /* splitView_score_glass@2x.png in Resources */,
+				FAE19DB71C95E7D40063B448 /* comtesDeChampagne.jpg in Resources */,
 				FAD68A3A1C8361DE002B1F83 /* Assets.xcassets in Resources */,
 				FAF85F331C8B0FA200402FAD /* WineViewController.xib in Resources */,
 				FAF85F3E1C8B7E5400402FAD /* WebViewController.xib in Resources */,
+				FAE19DB81C95E7D40063B448 /* zarate.gif in Resources */,
 				FAF85F391C8B546E00402FAD /* bembibre.jpg in Resources */,
 				FAD68A3D1C8361DE002B1F83 /* LaunchScreen.storyboard in Resources */,
 			);
