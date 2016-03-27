@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA29A4621CA5660700452E0D /* wineryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA29A4611CA5660700452E0D /* wineryModel.m */; };
+		FA29A4651CA56E2400452E0D /* WineryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA29A4641CA56E2400452E0D /* WineryTableViewController.m */; };
 		FAD68A351C8361DE002B1F83 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD68A341C8361DE002B1F83 /* main.m */; };
 		FAD68A381C8361DE002B1F83 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD68A371C8361DE002B1F83 /* AppDelegate.m */; };
 		FAD68A3A1C8361DE002B1F83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAD68A391C8361DE002B1F83 /* Assets.xcassets */; };
@@ -23,6 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA29A4601CA5660700452E0D /* wineryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wineryModel.h; sourceTree = "<group>"; };
+		FA29A4611CA5660700452E0D /* wineryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = wineryModel.m; sourceTree = "<group>"; };
+		FA29A4631CA56E2400452E0D /* WineryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WineryTableViewController.h; sourceTree = "<group>"; };
+		FA29A4641CA56E2400452E0D /* WineryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WineryTableViewController.m; sourceTree = "<group>"; };
 		FAD68A301C8361DE002B1F83 /* Baccus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Baccus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD68A341C8361DE002B1F83 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FAD68A361C8361DE002B1F83 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -98,6 +104,8 @@
 		FAD68A471C837294002B1F83 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FA29A4601CA5660700452E0D /* wineryModel.h */,
+				FA29A4611CA5660700452E0D /* wineryModel.m */,
 				FAD68A441C837270002B1F83 /* WineModel.h */,
 				FAD68A451C837270002B1F83 /* WineModel.m */,
 			);
@@ -113,6 +121,8 @@
 				FAF85F3A1C8B7E5400402FAD /* WebViewController.h */,
 				FAF85F3B1C8B7E5400402FAD /* WebViewController.m */,
 				FAF85F3C1C8B7E5400402FAD /* WebViewController.xib */,
+				FA29A4631CA56E2400452E0D /* WineryTableViewController.h */,
+				FA29A4641CA56E2400452E0D /* WineryTableViewController.m */,
 			);
 			name = Controllers;
 			path = ..;
@@ -205,8 +215,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAD68A461C837270002B1F83 /* WineModel.m in Sources */,
+				FA29A4621CA5660700452E0D /* wineryModel.m in Sources */,
 				FAF85F3D1C8B7E5400402FAD /* WebViewController.m in Sources */,
 				FAF85F321C8B0FA200402FAD /* WineViewController.m in Sources */,
+				FA29A4651CA56E2400452E0D /* WineryTableViewController.m in Sources */,
 				FAD68A381C8361DE002B1F83 /* AppDelegate.m in Sources */,
 				FAD68A351C8361DE002B1F83 /* main.m in Sources */,
 			);
