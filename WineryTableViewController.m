@@ -17,8 +17,10 @@
 
 -(id) initWithModel: (wineryModel *) aModel
               style:(UITableViewStyle) aStyle {
+    
     if (self = [super initWithStyle: aStyle]) {
         _model = aModel;
+        self.title =@"Baccus";
     }
     
     return self;
@@ -34,12 +36,31 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+-(void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0.5
+                                                                           green:0
+                                                                            blue:0.13
+                                                                           alpha:1];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
+
+-(NSString *) tableView:(UITableView *)tableView
+titleForHeaderInSection:(NSInteger)section {
+    if (section == RED_WINE_SECTION) {
+        return @"Red Wines";
+    } else if (section == WHITE_WINE_SECTION) {
+        return @"White whines";
+    } else {
+        return @"Other wines";
+    }
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // return the number of sections

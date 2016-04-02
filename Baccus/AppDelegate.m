@@ -27,20 +27,22 @@
     // crear modelo
     wineryModel *winery = [[wineryModel alloc] init];
     
-    // crear controlador
+    // crear controladores
     WineryTableViewController *wineryVC = [[WineryTableViewController alloc] initWithModel:winery
                                                                                      style:UITableViewStylePlain];
+    WineViewController *wineVC = [[WineViewController alloc] initWithModel:[winery redWineAtIndex: 0]];
     
+    // crear navigations
+    UINavigationController *wineryNav = [[UINavigationController alloc] initWithRootViewController: wineryVC];
+    UINavigationController *wineNav = [[UINavigationController alloc] initWithRootViewController: wineVC];
     
-    // crear navigation
-    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController: wineryVC];
-
-    
-    
+    // Crear combinador splitview
+    UISplitViewController *splitVC = [[UISplitViewController alloc] init];
+    splitVC.viewControllers = @[wineryNav, wineNav];
     
     // asignar controlador raiz
     
-    self.window.rootViewController = navVC;
+    self.window.rootViewController = splitVC;
     
     
     self.window.backgroundColor = [UIColor orangeColor];
