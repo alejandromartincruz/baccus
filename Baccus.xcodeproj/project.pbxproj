@@ -80,9 +80,9 @@
 		FAD68A321C8361DE002B1F83 /* Baccus */ = {
 			isa = PBXGroup;
 			children = (
-				FAF85F371C8B536C00402FAD /* Resources */,
 				FAD68A361C8361DE002B1F83 /* AppDelegate.h */,
 				FAD68A371C8361DE002B1F83 /* AppDelegate.m */,
+				FAF85F371C8B536C00402FAD /* Resources */,
 				FAD68A471C837294002B1F83 /* Models */,
 				FAF85F341C8B0FC000402FAD /* Controllers */,
 				FAD68A391C8361DE002B1F83 /* Assets.xcassets */,

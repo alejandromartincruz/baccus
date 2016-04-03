@@ -39,6 +39,10 @@
     
     [self syncModelWithView];
     
+    if (self.splitViewController.displayMode == UISplitViewControllerDisplayModePrimaryHidden) {
+        self.navigationItem.rightBarButtonItem = self.splitViewController.displayModeButtonItem;
+    }
+    
     
     
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0.5
@@ -119,4 +123,17 @@
 }
 */
 
+#pragma mark - UISplitViewControllerDelegate
+
+-(void) splitViewController:(UISplitViewController *)svc
+    willChangeToDisplayMode:(UISplitViewControllerDisplayMode)displayMode {
+    
+    if (displayMode == UISplitViewControllerDisplayModePrimaryHidden) {
+        self.navigationItem.rightBarButtonItem = svc.displayModeButtonItem;
+    }
+    
+    if (displayMode == UISplitViewControllerDisplayModeAllVisible) {
+        self.navigationItem.rightBarButtonItem = nil;
+    }
+}
 @end
