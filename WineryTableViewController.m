@@ -156,12 +156,9 @@ titleForHeaderInSection:(NSInteger)section {
 }
 */
 
-#pragma mark - Table view delegate
+#pragma mark - Utils
 
--(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    // from inside a navigation controller
-    
+-(WineModel *) wineForIndexPath: (NSIndexPath *) indexPath {
     // find out the wine that is coming
     WineModel *wine = nil;
     
@@ -172,7 +169,14 @@ titleForHeaderInSection:(NSInteger)section {
     } else {
         wine = [self.model otherWineAtIndex:indexPath.row];
     }
-   
+    return wine;
+}
+
+#pragma mark - Table view delegate
+
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    WineModel *wine = [self wineForIndexPath:indexPath];
     
     [self.delegate WineryTableViewController:self
                                didSelectWine:wine];
@@ -183,6 +187,50 @@ titleForHeaderInSection:(NSInteger)section {
                                                     userInfo:@{WINE_KEY: wine}];
     
     [[NSNotificationCenter defaultCenter] postNotification:n];
+    
+    [self saveLastSelectedWineAtSection:indexPath.section
+                                    row:indexPath.row];
+}
+
+#pragma mark - NSUserDefaults
+
+- (NSDictionary *) setDefaults {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    NSDictionary *defaultWineCoords = @{SECTION_KEY : @(RED_WINE_SECTION), ROW_KEY : @0};
+    
+    [defaults setObject:defaultWineCoords
+                 forKey:LAST_WINE_KEY];
+    
+    [defaults synchronize];
+    
+    return defaultWineCoords;
+}
+
+-(void) saveLastSelectedWineAtSection: (NSUInteger)section row: (NSUInteger)row {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:@{SECTION_KEY : @(section), ROW_KEY : @(row)}
+                 forKey:LAST_WINE_KEY];
+    
+    [defaults synchronize];
+}
+
+-(WineModel *) lastSelectedWine {
+    NSIndexPath *indexPath = nil;
+    NSDictionary *coords = nil;
+    
+    coords = [[NSUserDefaults standardUserDefaults] objectForKey:LAST_WINE_KEY];
+    
+    if (coords == nil) {
+        coords = [self setDefaults];
+    } else {
+        
+    }
+    
+    indexPath = [NSIndexPath indexPathForRow:[[coords objectForKey:ROW_KEY] integerValue]
+                                   inSection:[[coords objectForKey:SECTION_KEY] integerValue]];
+    
+    return [self wineForIndexPath: indexPath];
 }
 
 @end

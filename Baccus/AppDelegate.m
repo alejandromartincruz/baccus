@@ -30,7 +30,7 @@
     // crear controladores
     WineryTableViewController *wineryVC = [[WineryTableViewController alloc] initWithModel:winery
                                                                                      style:UITableViewStylePlain];
-    WineViewController *wineVC = [[WineViewController alloc] initWithModel:[winery redWineAtIndex: 0]];
+    WineViewController *wineVC = [[WineViewController alloc] initWithModel:[wineryVC lastSelectedWine]];
     
     // crear navigations
     UINavigationController *wineryNav = [[UINavigationController alloc] initWithRootViewController: wineryVC];

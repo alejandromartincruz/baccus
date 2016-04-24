@@ -17,6 +17,10 @@
 #define NEW_WINE_NOTIFICATION_NAME @"newWine"
 #define WINE_KEY @"wine"
 
+#define SECTION_KEY @"section"
+#define ROW_KEY @"row"
+#define LAST_WINE_KEY @"lastWine"
+
 @class WineryTableViewController;
 
 @protocol WineryTableViewControllerDelegate <NSObject>
@@ -33,5 +37,7 @@
 
 -(id) initWithModel: (wineryModel *) aModel
               style:(UITableViewStyle) aStyle;
+
+-(WineModel *) lastSelectedWine;
 
 @end
