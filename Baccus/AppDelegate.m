@@ -42,6 +42,7 @@
     
     // Asignación de delegados
     splitVC.delegate = wineVC;
+    wineryVC.delegate = wineVC;
     
     // asignar controlador raiz
     

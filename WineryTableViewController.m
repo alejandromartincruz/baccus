@@ -164,6 +164,7 @@ titleForHeaderInSection:(NSInteger)section {
     
     // find out the wine that is coming
     WineModel *wine = nil;
+    
     if (indexPath.section == RED_WINE_SECTION) {
         wine = [self.model redWineAtIndex:indexPath.row];
     } else if (indexPath.section == WHITE_WINE_SECTION) {
@@ -171,13 +172,17 @@ titleForHeaderInSection:(NSInteger)section {
     } else {
         wine = [self.model otherWineAtIndex:indexPath.row];
     }
+   
     
-    // create a controller for this wine
-    WineViewController *wineVC = [[WineViewController alloc] initWithModel: wine];
+    [self.delegate WineryTableViewController:self
+                               didSelectWine:wine];
     
-    // made a push to the actual navigation controller
-    [self.navigationController pushViewController:wineVC
-                                         animated:YES];
+    //Notification
+    NSNotification *n = [NSNotification notificationWithName:NEW_WINE_NOTIFICATION_NAME
+                                                      object:self
+                                                    userInfo:@{WINE_KEY: wine}];
+    
+    [[NSNotificationCenter defaultCenter] postNotification:n];
 }
 
 @end

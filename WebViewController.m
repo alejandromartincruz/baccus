@@ -7,6 +7,7 @@
 //
 
 #import "WebViewController.h"
+#import "WineryTableViewController.h"
 
 @interface WebViewController ()
 
@@ -29,6 +30,31 @@
     [super viewWillAppear:animated];
     
     [self displayURL: self.model.wineCompanyWeb];
+    
+    // subscribe notiications
+    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+    [center addObserver: self
+               selector:@selector(wineDidChange:)
+                   name:NEW_WINE_NOTIFICATION_NAME
+                 object:nil];
+}
+
+- (void) wineDidChange: (NSNotification*) notification {
+    NSDictionary *dict = [notification userInfo];
+    
+    WineModel *newWine = [dict objectForKey:WINE_KEY];
+    
+    //update model
+    
+    self.model = newWine;
+    [self displayURL:self.model.wineCompanyWeb];
+}
+
+- (void) viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear: animated];
+    
+    // unsubscribe notifications
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)viewDidLoad {

@@ -136,4 +136,18 @@
         self.navigationItem.rightBarButtonItem = nil;
     }
 }
+
+
+#pragma mark - WineryTableViewControllerDelegate
+
+-(void) WineryTableViewController:(WineryTableViewController *)aWineryVC
+                    didSelectWine:(WineModel *)aWine {
+    
+    self.model =aWine;
+    self.title = aWine.name;
+    
+    [self syncModelWithView];
+
+}
+
 @end
